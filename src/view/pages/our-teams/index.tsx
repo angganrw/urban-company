@@ -1,0 +1,70 @@
+"use client";
+import React, { useEffect, useState } from "react";
+import { TiThMenu } from "react-icons/ti";
+
+interface TeamList {
+  name: {
+    first: string;
+    last: string;
+  };
+  email: string;
+  picture: {
+    large: string;
+  };
+  location: {
+    country: string;
+  };
+}
+
+export default function OurTeamsView() {
+  const [TeamMember, setTeamMember] = useState<TeamList[]>([]);
+
+  useEffect(() => {
+    const fetchTeamMember = async () => {
+      try {
+        const response = await fetch("https://randomuser.me/api/?results=6");
+        const data = await response.json();
+        setTeamMember(data.results);
+      } catch (error) {}
+    };
+
+    fetchTeamMember();
+  }, []);
+
+  return (
+    <section className="w-full h-[100vh] flex flex-col items-center pt-[7rem] bg-white">
+      <div className="flex flex-col items-center mb-8">
+        <h2 className="flex items-center text-[#1a79af] text-xl font-bold mb-2">
+          <TiThMenu className="mr-2" /> OUR TEAMS
+        </h2>
+        <h3 className="text-[50px] font-semibold mb-16">Meet The Team</h3>
+      </div>
+
+      <div className="w-[999px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 ">
+        {TeamMember.map((member, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-[#1a79af] hover:scale-105 hover:rotate-3 transition-all duration-300 transform"
+          >
+            <div className="p-6 text-center bg-gradient-to-r from-[#1a79af] to-[#58c8ef] hover:from-[#58c8ef] hover:to-[#1a79af] transition-all duration-300">
+              <img
+                src={member.picture.large}
+                alt={member.name.first}
+                className="rounded-full w-24 h-24 mx-auto border-4 border-white"
+              />
+            </div>
+            <div className="p-6 text-center">
+              <h3 className="text-lg font-semibold mb-2">
+                {`${member.name.first} ${member.name.last}`}
+              </h3>
+              <p className="text-sm text-gray-600 mb-2">{member.email}</p>
+              <p className="text-sm text-gray-600 mb-2">
+                {member.location.country}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

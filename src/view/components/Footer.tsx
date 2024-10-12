@@ -48,7 +48,7 @@ export default function Footer() {
             <p className="text-[0.9rem]">Email: info@urbandigital.com</p>
             <p className="text-[0.9rem]">Phone: +62 1234 56 7 89</p>
             <Link
-              href="#"
+              href="/about-"
               className="text-red-900 hover:text-[#1a79af] mt-2 text-bold"
             >
               View Map →

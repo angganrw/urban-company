@@ -1,5 +1,5 @@
 import ServiceView from "@/view/pages/services";
 
-export default function Abaout() {
+export default function AppServices() {
   return <ServiceView />;
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { TiThMenu } from "react-icons/ti";
 import ContentfulClient from "@/Contentful/contentfulClient";
 import {
@@ -53,9 +54,11 @@ export default async function ServiceView() {
             <p className="text-gray-900 text-sm md:text-base mb-8 md:mb-10 text-center">
               {services.fields.description}
             </p>
-            <button className="relative -top-1 -left-1 bg-[#1a79af] py-2.5 px-5 font-medium uppercase text-white transition-all before:absolute before:top-1 before:left-1 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0">
-              Lets Talk
-            </button>
+            <Link href="/our-teams">
+              <button className="relative -top-1 -left-1 bg-[#1a79af] py-2.5 px-5 font-medium uppercase text-white transition-all before:absolute before:top-1 before:left-1 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0">
+                Lets Talk
+              </button>
+            </Link>
           </div>
         ))}
       </div>

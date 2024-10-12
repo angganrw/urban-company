@@ -5,7 +5,7 @@ import OurTeamsView from "@/view/pages/our-teams";
 import ServiceView from "@/view/pages/services";
 import TestimonialView from "@/view/pages/testimonials";
 
-export default function Abaout() {
+export default function AppHome() {
   return (
     <div>
       <HomeView />

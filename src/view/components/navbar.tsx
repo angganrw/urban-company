@@ -70,12 +70,14 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <button
-                className="border border-[#1a79af] text-black font-semibold py-2 px-4 rounded-full transition duration-300 
+              <Link href="/our-teams">
+                <button
+                  className="border border-[#1a79af] text-black font-semibold py-2 px-4 rounded-full transition duration-300 
   hover:bg-[#1a79af] hover:text-white hover:transform hover:scale-110 hover:rotate-3"
-              >
-                Let's Talk
-              </button>
+                >
+                  Let's Talk
+                </button>
+              </Link>
             </li>
           </ul>
         </nav>

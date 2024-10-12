@@ -1,5 +1,5 @@
 import OurTeamsView from "@/view/pages/our-teams";
 
-export default function Abaout() {
+export default function AppOurTeams() {
   return <OurTeamsView />;
 }

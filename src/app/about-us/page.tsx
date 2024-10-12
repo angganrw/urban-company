@@ -1,5 +1,5 @@
 import AboutUsView from "@/view/pages/about-us";
 
-export default function Abaout() {
+export default function AppAbaout() {
   return <AboutUsView />;
 }

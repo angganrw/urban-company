@@ -47,6 +47,8 @@ export default function AboutUsView() {
             layout="fill"
             objectFit="cover"
             className="rounded-lg shadow-lg"
+            sizes="(max-width: 600px) 100vw, 600px"
+            priority={true}
           />
         </div>
       </div>

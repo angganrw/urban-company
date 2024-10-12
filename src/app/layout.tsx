@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "URBAN DIGITAL",
   description:
     "Website Design & Build — We take the time to listen to your vision and transform it into digital reality. From concept to execution, our goal is to create a website or app that not only looks great but also helps you achieve your business objectives.",
+  icons: {
+    icon: "/img/header-icon-lg.webp",
+  },
 };
 
 export default function RootLayout({

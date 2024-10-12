@@ -23,7 +23,11 @@ export default function Navbar() {
           />
         </div>
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-black cursor-pointer">
+          <button
+            onClick={toggleMenu}
+            className="text-black cursor-pointer"
+            aria-label={ifMOpen ? "Close menu" : "Open menu"}
+          >
             {ifMOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>

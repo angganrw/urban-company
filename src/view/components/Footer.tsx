@@ -27,16 +27,16 @@ export default function Footer() {
               your success through technology and creativity.
             </p>
             <div className="flex space-x-4">
-              <Link href="#">
+              <Link href="#" aria-label="Facebook">
                 <FaFacebook className="text-[1.5rem] hover:text-blue-600" />
               </Link>
-              <Link href="#">
+              <Link href="#" aria-label="Instagram">
                 <FaInstagramSquare className="text-[1.5rem] hover:text-pink-500" />
               </Link>
-              <Link href="#">
+              <Link href="#" aria-label="LinkedIn">
                 <FaLinkedin className="text-[1.5rem] hover:text-blue-700" />
               </Link>
-              <Link href="#">
+              <Link href="#" aria-label="Twitter">
                 <FaTwitterSquare className="text-[1.5rem] hover:text-blue-400" />
               </Link>
             </div>
@@ -47,9 +47,12 @@ export default function Footer() {
             <p className="text-[0.9rem]">South PIK2, INA</p>
             <p className="text-[0.9rem]">Email: info@urbandigital.com</p>
             <p className="text-[0.9rem]">Phone: +62 1234 56 7 89</p>
-            <a href="#" className="text-red-400 hover:text-red-500 mt-2 block">
+            <Link
+              href="#"
+              className="text-red-900 hover:text-[#1a79af] mt-2 text-bold"
+            >
               View Map →
-            </a>
+            </Link>
           </div>
           <div className="w-full md:w-1/3">
             <h3 className="font-semibold text-[1.1rem] mb-4">Links</h3>

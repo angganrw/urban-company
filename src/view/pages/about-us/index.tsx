@@ -43,11 +43,11 @@ export default function AboutUsView() {
         <div className="relative w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
           <Image
             src="/img/abaout-icon.webp"
-            alt="About Us Icon"
+            alt="abaoutusicon"
             layout="fill"
             objectFit="cover"
             className="rounded-lg shadow-lg"
-            sizes="(max-width: 600px) 100vw, 600px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
             priority={true}
           />
         </div>

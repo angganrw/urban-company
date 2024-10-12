@@ -14,6 +14,7 @@ interface TeamList {
   location: {
     country: string;
   };
+  phone: string;
 }
 
 export default function OurTeamsView() {
@@ -32,15 +33,16 @@ export default function OurTeamsView() {
   }, []);
 
   return (
-    <section className="w-full h-[100vh] flex flex-col items-center pt-[7rem] bg-white">
-      <div className="flex flex-col items-center mb-8">
-        <h2 className="flex items-center text-[#1a79af] text-xl font-bold mb-2">
+    <section className="w-full h-auto flex flex-col items-center  pt-24 pb-16 md:pt-32 bg-white px-4 md:px-0">
+      <div className="flex flex-col items-center mb-8 text-center">
+        <h2 className="flex items-center text-[#1a79af] text-lg md:text-xl font-bold mb-4">
           <TiThMenu className="mr-2" /> OUR TEAMS
         </h2>
-        <h3 className="text-[50px] font-semibold mb-16">Meet The Team</h3>
+        <h3 className="text-3xl md:text-[50px] font-semibold mb-8 md:mb-16">
+          Meet The Team
+        </h3>
       </div>
-
-      <div className="w-[999px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 ">
+      <div className="w-full max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {TeamMember.map((member, index) => (
           <div
             key={index}
@@ -58,9 +60,7 @@ export default function OurTeamsView() {
                 {`${member.name.first} ${member.name.last}`}
               </h3>
               <p className="text-sm text-gray-600 mb-2">{member.email}</p>
-              <p className="text-sm text-gray-600 mb-2">
-                {member.location.country}
-              </p>
+              <p className="text-sm text-gray-600">{member.phone}</p>
             </div>
           </div>
         ))}

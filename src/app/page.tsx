@@ -1,3 +1,4 @@
+import Footer from "@/view/components/Footer";
 import AboutUsView from "@/view/pages/about-us";
 import HomeView from "@/view/pages/home";
 import OurTeamsView from "@/view/pages/our-teams";
@@ -12,6 +13,7 @@ export default function Abaout() {
       <ServiceView />
       <OurTeamsView />
       <TestimonialView />
+      <Footer />
     </div>
   );
 }

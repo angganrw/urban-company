@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo">
           <Image
-            src="/img/logo-navbar.svg"
+            src="/img/logo-navbar.webp"
             alt="logo"
             width={130}
             height={60}

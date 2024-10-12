@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="w-full md:w-1/3">
             <div className="logo mb-4">
               <Image
-                src="/img/logo-navbar.svg"
+                src="/img/logo-navbar.webp"
                 alt="logo"
                 width={130}
                 height={60}

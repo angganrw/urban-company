@@ -56,7 +56,10 @@ export default async function ServiceView() {
             </p>
             <div className="mb-4">
               <Link href={`/services/${services.fields.slug}`}>
-                <button className="relative -top-1 -left-1 bg-[#1a79af] py-2.5 px-5 font-sm text-[13px] uppercase text-white transition-all before:absolute before:top-1 before:left-1 before:-z-[1] before:h-full before:w-full before:border-2 before:border-gray-700 before:transition-all before:content-[''] hover:top-0 hover:left-0 before:hover:top-0 before:hover:left-0">
+                <button
+                  className="border border-[#1a79af] text-black font-semibold py-2 px-4 rounded-[5px] transition duration-300 
+  hover:bg-[#fff] hover:bg-opacity-30 bg-opacity-35  bg-[#1a79af] hover:text-black transpa hover:transform hover:scale-110 hover:rotate-3"
+                >
                   Explore our {services.fields.title} ...
                 </button>
               </Link>

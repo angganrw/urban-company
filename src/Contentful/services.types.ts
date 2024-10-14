@@ -22,6 +22,7 @@ export interface TypeServicesFields {
   title: EntryFieldTypes.Symbol;
   description: EntryFieldTypes.Symbol;
   icon?: EntryFieldTypes.AssetLink;
+  slug: EntryFieldTypes.Symbol;
 }
 
 export type TypeServicesSkeleton = EntrySkeletonType<

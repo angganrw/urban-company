@@ -71,7 +71,7 @@ export default function OurTeamsView() {
               </p>
               <p className="text-sm text-gray-600">
                 <FaMapMarkerAlt className="inline mr-2" />
-                {member.location.city} , {member.location.state} ,{" "}
+                {member.location.city} , {member.location.state} ,
                 {member.location.country}
               </p>
             </div>

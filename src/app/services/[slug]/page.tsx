@@ -6,6 +6,7 @@ import {
   IServiceAsset,
 } from "@/Contentful/services.types";
 import Image from "next/image";
+import Link from "next/link";
 
 async function getServiceData(slug: string) {
   const data = await ContentfulClient.getEntries<TypeServicesSkeleton>({
@@ -56,10 +57,12 @@ export default async function ServiceDetail({
           <p className="text-gray-800 text-sm md:text-base mb-8 md:mb-10 text-center">
             {service.fields.description}
           </p>
-          <button className="relative flex items-center border-2 border-[#1a79af] bg-transparent py-2.5 px-5 font-medium uppercase text-gray-800 transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-y-0 before:bg-[#1a79af] before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-y-100">
-            Let's Start
-            <GrSend className="ml-2" />
-          </button>
+          <Link href="/contact">
+            <button className="relative flex items-center border-2 border-[#1a79af] bg-transparent py-2.5 px-5 font-medium uppercase text-gray-800 transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-y-0 before:bg-[#1a79af] before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-y-100">
+              Let's Start
+              <GrSend className="ml-2" />
+            </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { TiThMenu } from "react-icons/ti";
+import { FaPhoneSquareAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 interface TeamList {
   name: {
@@ -55,12 +57,20 @@ export default function OurTeamsView() {
                 className="rounded-full w-24 h-24 mx-auto border-4 border-white"
               />
             </div>
-            <div className="p-6 text-center">
-              <h3 className="text-lg font-semibold mb-2">
+            <div className="p-6 text-center space-y-2">
+              <h3 className="text-lg font-semibold">
                 {`${member.name.first} ${member.name.last}`}
               </h3>
-              <p className="text-sm text-gray-600 mb-2">{member.email}</p>
-              <p className="text-sm text-gray-600">{member.phone}</p>
+              <p className="text-sm text-gray-600">
+                <MdEmail className="inline mr-2" /> {member.email}
+              </p>
+              <p className="text-sm text-gray-600">
+                <FaPhoneSquareAlt className="inline mr-2" /> {member.phone}
+              </p>
+              <p className="text-sm text-gray-600">
+                <FaMapMarkerAlt className="inline mr-2" />
+                {member.location.country}
+              </p>
             </div>
           </div>
         ))}

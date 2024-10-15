@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { TiThMenu } from "react-icons/ti";
 
 export default function ContactModal() {
   const [formData, setFormData] = useState({
@@ -27,10 +28,12 @@ export default function ContactModal() {
   };
 
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center pt-24 pb-16 md:pt-32 hover:shadow-[#1a79af] px-4 md:px-0">
-      <h3 className="text-3xl md:text-[50px] font-semibold mb-8 md:mb-16">
-        Contact Us
-      </h3>
+    <section className="w-full h-auto flex flex-col items-center  pt-24 pb-16 md:pt-32 bg-white px-4 md:px-0">
+      <div className="flex flex-col items-center mb-8 text-center">
+        <h2 className="flex items-center text-[#1a79af] text-lg md:text-xl font-bold mb-4">
+          <TiThMenu className="mr-2" /> CONTACT US
+        </h2>
+      </div>
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
           <div className="w-full lg:w-1/2">

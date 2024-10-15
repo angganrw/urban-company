@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import ContentfulClient from "@/Contentful/contentfulClient";
 import { GrSend } from "react-icons/gr";
 import {
@@ -28,7 +27,7 @@ export default async function ServiceDetail({
   const service = await getServiceData(params.slug);
 
   if (!service) {
-    notFound();
+    throw new Error("Slug tidak ditemukan.");
   }
 
   return (
